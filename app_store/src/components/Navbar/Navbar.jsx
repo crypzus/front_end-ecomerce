@@ -5,62 +5,75 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import DarkMode from "./DarkMode";
 import { FaCaretDown } from "react-icons/fa";
 // los elementos del navbar
-const Menu = [
-  {
-    id: 1,
-    name: "Inicio",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Proyectos",
-    link: "/#services",
-  },
-  {
-    id: 3,
-    name: "Productos",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Mens Wear",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Contactanos",
-    link: "/#",
-  },
-];
 
 const Productos = [
   {
     id: 1,
-    name: "Inicio",
+    name: "Globos",
     link: "/#",
   },
   {
     id: 2,
-    name: "Proyectos",
+    name: "Cortinas",
     link: "/#services",
   },
   {
     id: 3,
-    name: "Productos",
+    name: "Cajas decoradas",
     link: "/#",
   },
   {
-    id: 3,
-    name: "Mens Wear",
+    id: 4,
+    name: "Viniles",
     link: "/#",
   },
   {
-    id: 3,
-    name: "Contactanos",
+    id: 5,
+    name: "Copas y Vasos",
     link: "/#",
   },
 ];
 
+const Proyectos = [
+  {
+    id: 1,
+    name: "arreglos",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Decoraciones",
+    link: "/#services",
+  },
+  {
+    id: 3,
+    name: "Tareas escolares",
+    link: "/#",
+  },
+  {
+    id: 4,
+    name: "Manualidades",
+    link: "/#",
+  },
+];
+
+const Alquileres = [
+  {
+    id: 1,
+    name: "estructuras",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Luces Neon",
+    link: "/#services",
+  },
+  {
+    id: 3,
+    name: "Donbos",
+    link: "/#",
+  },
+];
 const Navbar = () => {
   return (
     <div className="bg-white shadow-md dark:bg-gray-800 dark:text-white duration-200 relative z-40">
@@ -79,7 +92,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Busqueda"
-                className=" bg-white w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary"
+                className="  w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800 bg-white"
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute right-3 top-1/2 transform -translate-y-1/2" />
             </div>
@@ -103,33 +116,99 @@ const Navbar = () => {
       {/* parte de abajo del navbar */}
       <div className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
-          {Menu.map((data) => (
-            <li key={data.id}>
-              <a
-                href={data.link}
-                className="inline-block px-4 hover:text-primary duration-200"
-              >
-                {data.name}
-              </a>
-            </li>
-          ))}
-          {/* dropdown */}
           <li>
-            <a href="#" className="flex items-center gap-[2px] py-2">
+            <a
+              href="#"
+              className="inline-block px-4 hover:text-primary duration-200"
+            >
+              Inicio
+            </a>
+          </li>
+          {/* dropdown productos*/}
+          <li className="group relative cursor-pointer">
+            <a
+              href="#"
+              className="flex items-center gap-[2px] py-2 hover:text-primary duration-200"
+            >
               Productos
               <span>
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
-            <div>
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
               <ul>
                 {Productos.map((data) => (
                   <li key={data.id}>
-                    <a href={data.link}>{data.name}</a>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p2 hover:bg-primary/20"
+                    >
+                      {data.name}
+                    </a>
                   </li>
                 ))}
               </ul>
             </div>
+          </li>
+          {/* dropdown Proyectos*/}
+          <li className="group relative cursor-pointer">
+            <a
+              href="#"
+              className="flex items-center gap-[2px] py-2 hover:text-primary duration-200"
+            >
+              Proyectos
+              <span>
+                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+              </span>
+            </a>
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+              <ul>
+                {Proyectos.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p2 hover:bg-primary/20"
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+          {/* dropdown Alquileres*/}
+          <li className="group relative cursor-pointer">
+            <a
+              href="#"
+              className="flex items-center gap-[2px] py-2 hover:text-primary duration-200"
+            >
+              Alquileres
+              <span>
+                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+              </span>
+            </a>
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+              <ul>
+                {Alquileres.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p2 hover:bg-primary/20"
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="inline-block px-4 hover:text-primary duration-200"
+            >
+              Contactanos
+            </a>
           </li>
         </ul>
       </div>
