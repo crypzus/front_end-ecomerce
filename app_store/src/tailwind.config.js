@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {},
       colors: {
-        primary: "#E6007E",
+        primary: "#e033ff",
         secondary: "#5B0E66",
-        tertiary: "#d836ee",
+        tercero: "#ffffff",
+        cuarto: "#8e04f9",
       },
       container: {
         center: true,

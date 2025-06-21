@@ -87,25 +87,33 @@ const Navbar = () => {
             </a>
           </div>
           {/* barra de busqueda  */}
-          <div className="flex justify-between items-center gap-4">
+          <div className="flex justify-between items-center gap-4 ">
             <div className=" relative group hidden sm:block">
               <input
                 type="text"
                 placeholder="Busqueda"
-                className="  w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800 bg-white"
+                className="  w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800 bg-white group-hover:placeholder-primary"
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute right-3 top-1/2 transform -translate-y-1/2" />
             </div>
             {/* boton de ordenes */}
+
             <button
               onClick={() => alert("pedidos no disponible todavia")}
-              className="bg-gradient-to-r from-primary to-secondary transition-all text-white px-4 py-1 rounded-full hover:from-secondary  duration-200 flex items-center gap-3 group"
+              className=" bg-primary
+             dark:bg-white 
+             transition-all duration-200 
+             text-white dark:text-black 
+             px-4 py-1 rounded-full 
+             hover:bg-secondary 
+             flex items-center gap-3 group shadow-md  "
             >
-              <span className="group-hover:block hidden transition-all duration-200">
+              <span className="group-hover:block hidden transition-all duration-200 dark:text-black dark:group-hover:text-cuarto font-bold">
                 Orden
               </span>
-              <HiOutlineShoppingBag className="text-xl text-white drop-shadow-sm cursor-pointer" />
+              <HiOutlineShoppingBag className="text-xl text-white dark:text-black drop-shadow-sm cursor-pointer dark:group-hover:text-cuarto" />
             </button>
+
             {/* Darkmode switch  */}
             <div>
               <DarkMode />
@@ -135,7 +143,7 @@ const Navbar = () => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
-            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   dark:bg-gray-800 dark:text-white">
               <ul>
                 {Productos.map((data) => (
                   <li key={data.id}>
@@ -161,7 +169,7 @@ const Navbar = () => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
-            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   dark:bg-gray-800 dark:text-white">
               <ul>
                 {Proyectos.map((data) => (
                   <li key={data.id}>
@@ -187,7 +195,7 @@ const Navbar = () => {
                 <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
               </span>
             </a>
-            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+            <div className="absolute z-[99999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   dark:bg-gray-800 dark:text-white">
               <ul>
                 {Alquileres.map((data) => (
                   <li key={data.id}>
