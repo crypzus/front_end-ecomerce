@@ -70,7 +70,7 @@ const Alquileres = [
   },
   {
     id: 3,
-    name: "Donbos",
+    name: "Dombos",
     link: "/#",
   },
 ];
@@ -81,8 +81,11 @@ const Navbar = () => {
       <div className="bg-primary/40 py-2">
         <div className="container  flex justify-between items-center">
           <div>
-            <a href="#" className="flex font-bold gap-2  text-2xl sm:text-3xl">
-              <img src={Logo} alt="Logo" className="w-10 uppercase" />
+            <a
+              href="#"
+              className="flex font-bold gap-2  text-2xl sm:text-3xl font-poppins "
+            >
+              <img src={Logo} alt="Logo" className="w-10 uppercase " />
               Balloons Decorations
             </a>
           </div>
@@ -100,10 +103,10 @@ const Navbar = () => {
 
             <button
               onClick={() => alert("pedidos no disponible todavia")}
-              className=" bg-primary
-             dark:bg-white 
+              className="bg-gradient-to-r from-primary to-secondary
+            dark:from-white dark:to-white dark:text-gray-950 dark:hover:text-cuarto 
              transition-all duration-200 
-             text-white dark:text-black 
+             text-white  
              px-4 py-1 rounded-full 
              hover:bg-secondary 
              flex items-center gap-3 group shadow-md  "

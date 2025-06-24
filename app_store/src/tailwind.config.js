@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     // Habilita el modo oscuro
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+      },
       colors: {
         primary: "#e033ff",
         secondary: "#5B0E66",
