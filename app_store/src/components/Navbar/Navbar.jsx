@@ -95,7 +95,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Busqueda"
-                className="  w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800 bg-white group-hover:placeholder-primary"
+                className="  w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800 bg-white group-hover:placeholder-primary hover:border-primary hover:border-1"
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute right-3 top-1/2 transform -translate-y-1/2" />
             </div>
@@ -109,12 +109,12 @@ const Navbar = () => {
              text-white  
              px-4 py-1 rounded-full 
              hover:bg-secondary 
-             flex items-center gap-3 group shadow-md  "
+             flex items-center gap-3 group shadow-md hover:text-primary hover:font-bold  hover:from-white hover:to-white  hover:border-primary hover:border-1"
             >
-              <span className="group-hover:block hidden transition-all duration-200 dark:text-black dark:group-hover:text-cuarto font-bold">
-                Orden
+              <span className="group-hover:block hidden transition-all duration-200 dark:text-black dark:group-hover:text-cuarto font-bold ">
+                Ordenes
               </span>
-              <HiOutlineShoppingBag className="text-xl text-white dark:text-black drop-shadow-sm cursor-pointer dark:group-hover:text-cuarto" />
+              <HiOutlineShoppingBag className="text-xl text-white dark:text-black drop-shadow-sm cursor-pointer dark:group-hover:text-cuarto group-hover:text-primary" />
             </button>
 
             {/* Darkmode switch  */}

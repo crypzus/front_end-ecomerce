@@ -74,8 +74,8 @@ const Hero = () => {
                     data-aos-duration="500"
                     data-aos-delay="300"
                   >
-                    <button className="ml-4 bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white font-bold py-2 px-3 rounded-full dark:from-white dark:to-white dark:text-gray-950 dark:hover:text-cuarto ">
-                      pida ahora
+                    <button className="ml-4 bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white font-bold py-2 px-3 rounded-full dark:from-white dark:to-white dark:text-gray-950 dark:hover:text-cuarto hover:text-primary hover:font-bold  hover:from-white hover:to-white hover:bg-white hover:border-primary hover:border-2">
+                      Pida ahora
                     </button>
                   </div>
                 </div>
