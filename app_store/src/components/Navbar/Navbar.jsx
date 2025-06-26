@@ -109,12 +109,12 @@ const Navbar = () => {
              text-white  
              px-4 py-1 rounded-full 
              hover:bg-secondary 
-             flex items-center gap-3 group shadow-md hover:text-primary hover:font-bold  hover:from-white hover:to-white  hover:border-primary hover:border-1"
+             flex items-center gap-3 group shadow-md"
             >
               <span className="group-hover:block hidden transition-all duration-200 dark:text-black dark:group-hover:text-cuarto font-bold ">
                 Ordenes
               </span>
-              <HiOutlineShoppingBag className="text-xl text-white dark:text-black drop-shadow-sm cursor-pointer dark:group-hover:text-cuarto group-hover:text-primary" />
+              <HiOutlineShoppingBag className="text-xl text-white dark:text-black drop-shadow-sm cursor-pointer dark:group-hover:text-cuarto " />
             </button>
 
             {/* Darkmode switch  */}

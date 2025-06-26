@@ -3,6 +3,7 @@ import Img1 from "../../assets/productos/globos_cromados/azul.png";
 import Img2 from "../../assets/productos/globos_retro/lila.png";
 import Img3 from "../../assets/productos/globlos_latex/marron.png";
 import { FaStar } from "react-icons/fa";
+import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
 const ProductsData = [
   {
@@ -33,17 +34,17 @@ const ProductsData = [
 
 const TopProduts = () => {
   return (
-    <div>
-      <div className="container">
+    <div className="bg-gray-100">
+      <div className="container ">
         {/* header setion */}
-        <div className="text-left  mb-24 ">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            Los mas vendidos
+        <div className="text-center  mb-24 ">
+          <p data-aos="zoom-in-up" className="text-sm text-primary">
+            Productos en Tendencia
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold ">
-            Los Mejores productos
+          <h1 data-aos="zoom-in-up" className="text-3xl font-bold ">
+            Los Productos mas Vendidos
           </h1>
-          <p data-aos="fade-up" className="text-gray-400 text-xs">
+          <p data-aos="zoom-in-up" className="text-gray-400 text-xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
             dolores eum et.
           </p>
@@ -53,7 +54,7 @@ const TopProduts = () => {
           {ProductsData.map((data) => (
             <div
               className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-secondary hover:text-white  relative shadow-xl duration-300 group max-w-[300px]"
-              data-aos="zoom-in"
+              data-aos="zoom-in-up"
             >
               {/* image section */}
               <div className="h-[100px]">
@@ -74,16 +75,22 @@ const TopProduts = () => {
                   <FaStar className="text-yellow-500" />
                 </div>
                 <h1 className="text-xl font-bold">{data.title}</h1>
-                <h2 className="text-xl">{data.color}</h2>
+                <p className="text-md">{data.color}</p>
                 <p className="text-gray-500 group-hover:text-white duration-300 line-clamp-2">
                   {data.description}
                 </p>
-                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white hover:text-primary hover:font-bold  hover:from-white hover:to-white hover:bg-white ">
+                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white hover:font-bold shadow-md">
                   Comprar Ahora
                 </button>
               </div>
             </div>
           ))}
+        </div>
+        <div data-aos="zoom-in" className="flex justify-center">
+          <button className="text-center mt-10 cursor-pointer  py-1 px-5 rounded-md flex items-center gap-2 hover:bg-secondary bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white hover:font-bold shadow-md">
+            Ver Todos
+            <HiOutlineChevronDoubleDown />
+          </button>
         </div>
       </div>
     </div>
