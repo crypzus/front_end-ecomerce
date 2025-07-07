@@ -1,27 +1,12 @@
-import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Productos from "./components/Productos/Productos";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import TopProduts from "./components/TopProduts/TopProduts";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Productos from "./pages/Productos";
 const App = () => {
-  React.useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 800,
-      easing: "ease-in-sine",
-      delay: 100,
-    });
-    AOS.refresh();
-  }, []);
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Productos />
-      <TopProduts />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/productos" element={<Productos />} />
+    </Routes>
   );
 };
 

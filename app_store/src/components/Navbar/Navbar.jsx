@@ -129,7 +129,7 @@ const Navbar = () => {
         <ul className="sm:flex hidden items-center gap-4">
           <li>
             <a
-              href="#"
+              href="/"
               className="inline-block px-4 hover:text-primary duration-200"
             >
               Inicio
@@ -138,7 +138,7 @@ const Navbar = () => {
           {/* dropdown productos*/}
           <li className="group relative cursor-pointer">
             <a
-              href="#"
+              href="/productos"
               className="flex items-center gap-[2px] py-2 hover:text-primary duration-200"
             >
               Productos

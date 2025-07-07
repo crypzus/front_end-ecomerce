@@ -1,38 +1,10 @@
-import React from "react";
-import Img1 from "../../assets/productos/globos_cromados/azul.png";
-import Img2 from "../../assets/productos/globos_retro/lila.png";
-import Img3 from "../../assets/productos/globlos_latex/marron.png";
-import { FaStar } from "react-icons/fa";
+import ProductsData from "../../data/ProductsData";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
-const ProductsData = [
-  {
-    id: 1,
-    img: Img1,
-    title: " Paquete globos cromado",
-    color: "Azul",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 2,
-    img: Img2,
-    title: "Paquete globos retro",
-    color: "Lila",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 3,
-    img: Img3,
-    title: "Paquete globos latex",
-    color: "Marron",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-];
-
-const TopProduts = () => {
+const TopProducts = () => {
+  const sortedProduts = [...ProductsData].sort((a, b) => b.rating - a.rating);
+  const topProducts = sortedProduts.slice(0, 3);
   return (
     <div className="bg-gray-100">
       <div className="container ">
@@ -51,8 +23,9 @@ const TopProduts = () => {
         </div>
         {/* body setion  */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
-          {ProductsData.map((data) => (
+          {topProducts.map((data) => (
             <div
+              key={data.id}
               className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-secondary hover:text-white  relative shadow-xl duration-300 group max-w-[300px]"
               data-aos="zoom-in-up"
             >
@@ -68,11 +41,33 @@ const TopProduts = () => {
               <div className="p-4 text-center">
                 {/* star rating */}
                 <div className="w-full flex items-center justify-center gap-1">
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
-                  <FaStar className="text-yellow-500" />
+                  <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-white gap-2 dark:group-hover:text-white">
+                    ({data.rating})
+                  </span>
+                  {[...Array(5)].map((_, index) => {
+                    const fullStars = Math.floor(data.rating); // Parte entera del rating (ej: 4 de 4.5)
+                    const hasHalfStar = data.rating % 1 !== 0; // Verifica si hay una parte decimal (ej: 0.5 de 4.5)
+
+                    // Determina qué estrella renderizar
+                    let StarComponent;
+                    let starClassName = "text-yellow-500 dark:text-primary"; // Por defecto, color de estrella llena
+
+                    if (index < fullStars) {
+                      // Si el índice es menor que las estrellas enteras, es una estrella completa
+                      StarComponent = FaStar;
+                    } else if (index === fullStars && hasHalfStar) {
+                      // Si el índice es igual a las estrellas enteras Y hay una media estrella, renderiza la media estrella
+                      StarComponent = FaStarHalfAlt; // O FaStarHalf si esa es la que prefieres/funciona
+                    } else {
+                      // De lo contrario, es una estrella vacía
+                      StarComponent = FaRegStar; // Estrella vacía
+                      starClassName = "text-gray-300"; // Color para estrella vacía
+                    }
+
+                    return (
+                      <StarComponent key={index} className={starClassName} />
+                    );
+                  })}
                 </div>
                 <h1 className="text-xl font-bold">{data.title}</h1>
                 <p className="text-md">{data.color}</p>
@@ -97,4 +92,4 @@ const TopProduts = () => {
   );
 };
 
-export default TopProduts;
+export default TopProducts;
