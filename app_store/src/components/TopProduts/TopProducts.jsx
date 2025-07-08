@@ -6,10 +6,10 @@ const TopProducts = () => {
   const sortedProduts = [...ProductsData].sort((a, b) => b.rating - a.rating);
   const topProducts = sortedProduts.slice(0, 3);
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 ">
       <div className="container ">
         {/* header setion */}
-        <div className="text-center  mb-24 ">
+        <div className="text-center mb-30">
           <p data-aos="zoom-in-up" className="text-sm text-primary">
             Productos en Tendencia
           </p>
@@ -22,7 +22,7 @@ const TopProducts = () => {
           </p>
         </div>
         {/* body setion  */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center p-10">
           {topProducts.map((data) => (
             <div
               key={data.id}
@@ -80,12 +80,6 @@ const TopProducts = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div data-aos="zoom-in" className="flex justify-center">
-          <button className="text-center mt-10 cursor-pointer  py-1 px-5 rounded-md flex items-center gap-2 hover:bg-secondary bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white hover:font-bold shadow-md">
-            Ver Todos
-            <HiOutlineChevronDoubleDown />
-          </button>
         </div>
       </div>
     </div>

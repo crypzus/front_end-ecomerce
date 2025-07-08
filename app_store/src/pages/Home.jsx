@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TopProducts from "../components/TopProduts/TopProducts";
+import Testimonio from "../components/Testimonio/Testimonio";
 
 const Home = () => {
   React.useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
       <Hero />
 
       <TopProducts />
+      <Testimonio />
     </div>
   );
 };

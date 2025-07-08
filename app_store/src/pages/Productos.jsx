@@ -25,14 +25,14 @@ const Productos = () => {
           {/* header section */}
           <div className="text-center mb-10 max-w-[600px] mx-auto">
             <p data-aos="fade-up" className="text-sm text-primary">
-              Los mas vendidos
+              Los mejores productos para tus eventos
             </p>
             <h1 data-aos="fade-up" className="text-3xl font-bold ">
               Productos
             </h1>
             <p data-aos="fade-up" className="text-gray-400 text-xs">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-              dolores eum et.
+              Cotiza con nosotros, obtén los mejores precios y asesoría
+              personalizada para tus eventos. ¡Contáctanos ahora!
             </p>
           </div>
           {/* body section */}

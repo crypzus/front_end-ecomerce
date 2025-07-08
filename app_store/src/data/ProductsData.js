@@ -29,7 +29,7 @@ const ProductsData = [
     id: 3,
     img: Img3,
     title: "Paquete globos latex",
-    rating: 4.7,
+    rating: 4.3,
     color: "Marron",
     aosDelay: "400",
     description:
@@ -39,7 +39,7 @@ const ProductsData = [
     id: 4,
     img: Img4,
     title: "Paquete globos cromado",
-    rating: 4.4,
+    rating: 4.8,
     color: "dorado",
     aosDelay: "600",
     description:
