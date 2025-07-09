@@ -47,13 +47,13 @@ const Testimonio = () => {
         {/* hader section */}
 
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-right" className="text-sm text-primary">
             Lo que piensan nuestros clientes
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold ">
+          <h1 data-aos="fade-right" className="text-3xl font-bold ">
             TESTIMONIOS
           </h1>
-          <p data-aos="fade-up" className="text-gray-400 text-xs">
+          <p data-aos="fade-right" className="text-gray-400 text-xs">
             tu opinion es muy importante para nosotros, por eso te invitamos a
             que nos dejes tu testimonio, para poder mejorar y ofrecerte un mejor
             servicio.
@@ -61,7 +61,7 @@ const Testimonio = () => {
         </div>
 
         {/* testimonnio cards */}
-        <div data-aos="zoom-in">
+        <div data-aos="fade-left">
           <Slider {...settings}>
             {allTestimonio.map((data) => (
               <div className="my-6">
