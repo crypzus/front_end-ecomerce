@@ -1,22 +1,21 @@
 import ProductsData from "../../data/ProductsData";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
 const TopProducts = () => {
   const sortedProduts = [...ProductsData].sort((a, b) => b.rating - a.rating);
   const topProducts = sortedProduts.slice(0, 3);
   return (
-    <div className="bg-gray-100 ">
+    <div className="bg-white dark:bg-gray-900 duration-200 dark:text-white">
       <div className="container ">
         {/* header setion */}
         <div className="text-center mb-30">
-          <p data-aos="zoom-in-up" className="text-sm text-primary">
+          <p data-aos="zoom-in-up" className="text-lg text-primary pt-5">
             Productos en Tendencia
           </p>
           <h1 data-aos="zoom-in-up" className="text-3xl font-bold ">
             Los Productos mas Vendidos
           </h1>
-          <p data-aos="zoom-in-up" className="text-gray-400 text-xs">
+          <p data-aos="zoom-in-up" className="text-gray-400 text-md">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
             dolores eum et.
           </p>
@@ -74,7 +73,7 @@ const TopProducts = () => {
                 <p className="text-gray-500 group-hover:text-white duration-300 line-clamp-2">
                   {data.description}
                 </p>
-                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white hover:font-bold shadow-md">
+                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 transition duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white hover:font-bold shadow-md dark:from-white dark:to-white dark:text-gray-950 dark:hover:text-cuarto">
                   Comprar Ahora
                 </button>
               </div>

@@ -42,18 +42,18 @@ const Testimonio = () => {
   };
   const allTestimonio = TestimonioData;
   return (
-    <div className="py-10 mb-10">
-      <div className="container">
+    <div className="  dark:bg-gray-950 duration-200 dark:text-white">
+      <div className="container ">
         {/* hader section */}
 
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-right" className="text-sm text-primary">
+          <p data-aos="fade-right" className="text-lg text-primary pt-5">
             Lo que piensan nuestros clientes
           </p>
-          <h1 data-aos="fade-right" className="text-3xl font-bold ">
+          <h1 data-aos="fade-right" className="text-3xl font-bold pt-2">
             TESTIMONIOS
           </h1>
-          <p data-aos="fade-right" className="text-gray-400 text-xs">
+          <p data-aos="fade-right" className="text-gray-400 text-md">
             tu opinion es muy importante para nosotros, por eso te invitamos a
             que nos dejes tu testimonio, para poder mejorar y ofrecerte un mejor
             servicio.
@@ -61,7 +61,7 @@ const Testimonio = () => {
         </div>
 
         {/* testimonnio cards */}
-        <div data-aos="fade-left">
+        <div data-aos="fade-left ">
           <Slider {...settings}>
             {allTestimonio.map((data) => (
               <div className="my-6">
@@ -78,14 +78,14 @@ const Testimonio = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="espace-y-3">
-                      <p className="text-xs text-gray-400">{data.text}</p>
+                      <p className="text-xs text-gray-400 ">{data.text}</p>
 
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <h1 className="text-xl font-bold text-black/80 dark:text-light dark:text-white">
                         {data.name}
                       </h1>
                     </div>
                   </div>
-                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
+                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0 dark:text-white/80">
                     ,,
                   </p>
                 </div>
